@@ -18,6 +18,7 @@ gamma_col=3       #Collective Decay rate
 k_col=0             #Collective Pumping rate
 gamma_phi_col=0       #Collective Dephasing rate
 
+t_eval=np.linspace(0,5,100)
 
 #PIQS Simulation
 start_time_piqs=time.time()
