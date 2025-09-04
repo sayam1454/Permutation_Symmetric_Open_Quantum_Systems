@@ -184,16 +184,17 @@ for idx, n in enumerate(Numberbasis.basis):
         dP_dt[idx,idx]+=-gamma_phi*(nij[1,0]+nij[0,1])
 
 
-    #For collective Decay
-    if gamma_col!=0:
-        dP_dt+=gamma_col/2*(2*J_left01@J_right10-J_left10@J_left01-J_right10@J_right01)
+    
+#For collective Decay
+if gamma_col!=0:
+    dP_dt+=gamma_col/2*(2*J_left01@J_right10-J_left10@J_left01-J_right01@J_right10)
 
-    #For collective Pumping
-    if k_col!=0:
-        dP_dt+=k_col/2*(2*J_left10@J_right01-J_left01@J_left10-J_right01@J_right10)
+#For collective Pumping
+if k_col!=0:
+    dP_dt+=k_col/2*(2*J_left10@J_right01-J_left01@J_left10-J_right10@J_right01)
 
    
-   
+
 
 #Time parameters
 t_final=5
