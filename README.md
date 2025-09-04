@@ -6,9 +6,9 @@ This package aims to simulate open quantum systems for an arbitary d-level quant
 
 Local processes are
 <ol>
-<li><b>Spontaneous Emission </b>: </li>
-<li><b>Spontaneous  </b>: </li>
-<li><b>Spontaneous Emission </b>: </li>
+<li><b>Spontaneous Decay </b>: </li>
+<li><b>Pumping</b>: </li>
+<li><b>Decoherence</b>: </li>
 </ol>
 
 <br>
@@ -17,8 +17,8 @@ Local processes are
 
 Collective processes are
 <ol>
-<li><b>Collective Emission </b>: </li>
-<li><b>Collective Emission </b>: </li>
-<li><b>Collective Emission </b>: </li>
+<li><b>Collective Decay </b>: </li>
+<li><b>Collective Pumping </b>: </li>
+<li><b>Collective Decoherence </b>: </li>
 </ol>
 </ol>
