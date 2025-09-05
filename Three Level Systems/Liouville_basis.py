@@ -12,7 +12,7 @@ from scipy.sparse.linalg import expm_multiply
 from scipy.sparse import csc_matrix,csr_matrix,lil_matrix
 
 #Creating the number basis class
-class SymmetricLiouvilleQubitNumberBasis:
+class SymmetricLiouvilleQutritNumberBasis:
     def __init__(self, N):
         self.N = N
         self.q = 3
