@@ -4,7 +4,7 @@ This work aims to simulate open quantum systems for an arbitary d-level quantum 
 <br>
 To overcome this challenge, one can invoke a particular symmetry called the permutation symmetry. This assumption brings down the scaling from exponential to polynomial (eg: For qubits: O(N^3) and in some special case O(N^2)). 
 <br>
-Not only it is mathematically helpful, this kind of formalism can be used to describe various experimental setups that are of major interests.(eg: all to all coupled systems)
+Not only is this mathematically helpful, this kind of formalism can be used to describe various experimental setups that are of major interests.(eg: all to all coupled systems)
 
 <section>
   <h1>Permutation-symmetric dissipative processes</h1>
@@ -93,13 +93,13 @@ Not only it is mathematically helpful, this kind of formalism can be used to des
   </p>
 
 # Benchmarking
-The intractable nature of this problem and the specific symmetry makes this a relatively less explored area. However ther is an existing framework in python incorporaated with QuTip called PIQS (Permutation Symmetry Quantum Solver). There is however no efficient framework for qudit system in python.
+The intractable nature of this problem and the specific symmetry makes this a relatively less explored area. However ther is an existing framework in python incorporated with QuTip called PIQS (Permutation Symmetry Quantum Solver). There is however no efficient framework for qudit system in python.
 <br>
-The method we employ is adopted from Gegg, M. (2017). Identical emitters, collective effects and dissipation in quantum optics: Novel numerical approaches for quantum master equations (Order No. 27610221). Available from ProQuest Dissertations & Theses Global. (2424459914). doi:https://doi.org/10.14279/depositonce-6526 Retrieved from https://www.proquest.com/dissertations-theses/identical-emitters-collective-effects-dissipation/docview/2424459914/se-2. Necessary fine tuning are made whenever felt so.
+The method we employ is adopted from Gegg, M. (2017). Identical emitters, collective effects and dissipation in quantum optics: Novel numerical approaches for quantum master equations (Order No. 27610221). Available from ProQuest Dissertations & Theses Global. (2424459914). doi:https://doi.org/10.14279/depositonce-6526 Retrieved from https://www.proquest.com/dissertations-theses/identical-emitters-collective-effects-dissipation/docview/2424459914/se-2. Necessary fine tunings are made whenever felt so.
 <br>
 The first benchmarking is done by comparing this code for qubits with the performance of PIQS. 
 <br>
 For qudits however we dont have a dedicated python package. So for that we work in completely uncoupled basis in QuTip. Though it is inefficient, this allows us to compare the code for a very small sample size and gain maximum confidence in this method.
 <br>
 <br>
-<strong>Note</strong>: There exist a C++ library mady by the author of the above mentioned paper called PsiQuaSP. However thepopularity of python for variety of nature, calls for a python based simulation code for such permutation symmetric d-level states.
+<strong>Note</strong>: There exist a C++ library mady by the author of the above mentioned paper called PsiQuaSP. However the popularity of python for variety of reasons, calls for a python based simulation code for such permutation symmetric d-level states.
