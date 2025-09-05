@@ -3,6 +3,11 @@ from State_initializtion import *
 from J_operators import *
 from Evolution import *
 
+'''
+This is the main simulation code. Just tweak the parameters according to 
+the problem and that will return the population of all three energy levels.
+'''
+
 
 # Number of qutrits
 N=10
