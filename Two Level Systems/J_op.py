@@ -5,9 +5,9 @@ def collective_J_right(x,y,Numberbasis):
     L= lil_matrix((Numberbasis.dim(),Numberbasis.dim()))
 
     for idx,n in enumerate(Numberbasis.basis):  
-        nij=np.array(n).reshape(3,3)
+        nij=np.array(n).reshape(2,2)
 
-        for k in range(3):
+        for k in range(2):
             n_copy = nij.copy()
             n_copy[x,k] += 1
             n_copy[y,k] -= 1
@@ -21,9 +21,9 @@ def collective_J_right(x,y,Numberbasis):
 def collective_J_left(x,y,Numberbasis):
     M= lil_matrix((Numberbasis.dim(),Numberbasis.dim()))
     for idx,n in enumerate(Numberbasis.basis):  
-        nij=np.array(n).reshape(3,3)
+        nij=np.array(n).reshape(2,2)
 
-        for k in range(3):
+        for k in range(2):
             n_copy = nij.copy()
             n_copy[k,x] -= 1
             n_copy[k,y] += 1
