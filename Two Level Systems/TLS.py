@@ -198,7 +198,7 @@ if k_col!=0:
 
 #Time parameters
 t_final=5
-t_steps=100
+t_steps=2
 t_eval = np.linspace(0, t_final, t_steps)
 
 P_values0=P_values.copy()
