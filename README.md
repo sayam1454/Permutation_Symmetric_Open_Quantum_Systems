@@ -19,9 +19,7 @@ Not only is this mathematically helpful, this kind of formalism can be used to d
   <h2>Local processes</h2>
   <p>
     Local processes describe dynamics where each atom, spin, or qutrit
-    interacts with its own environment. They generally break permutation 
-    symmetry because each particle can evolve differently, even if the 
-    rates are the same.
+    interacts with its own environment. They are called symmetry breaker as the dynamics cannot be fully tracked using the symmetric Dicke subspace. This is because these individual jump terms create off diagonal terms.(Check reference to know more)
   </p>
   <ul>
     <li>
@@ -103,3 +101,24 @@ For qudits however we dont have a dedicated python package. So for that we work 
 <br>
 <br>
 <strong>Note</strong>: There exist a C++ library mady by the author of the above mentioned paper called PsiQuaSP. However the popularity of python for variety of reasons, calls for a python based simulation code for such permutation symmetric d-level states.
+
+# References
+<ol>
+<li>Gegg, M. (2017). Identical emitters, collective effects and dissipation in quantum optics: Novel numerical approaches for quantum master equations (Order No. 27610221). Available from ProQuest Dissertations & Theses Global. (2424459914). doi:https://doi.org/10.14279/depositonce-6526 Retrieved from https://www.proquest.com/dissertations-theses/identical-emitters-collective-effects-dissipation/docview/2424459914/se-2</li>
+<li>
+  Chase, Bradley A.; Geremia, J. M. 
+  <em>Collective processes of an ensemble of spin-1/2 particles</em>. 
+  <i>Phys. Rev. A</i> <b>78</b>(5), 052101 (Nov 2008). 
+  DOI: <a href="https://doi.org/10.1103/PhysRevA.78.052101" target="_blank" rel="noopener noreferrer">
+    10.1103/PhysRevA.78.052101
+  </a>
+</li>
+<li>
+  Shammah, Nathan; Ahmed, Shahnawaz; Lambert, Neill; De Liberato, Simone; Nori, Franco. 
+  <em>Open quantum systems with local and collective incoherent processes: Efficient numerical simulations using permutational invariance</em>. 
+  <i>Phys. Rev. A</i> <b>98</b>(6), 063815 (Dec 2018). 
+  DOI: <a href="https://doi.org/10.1103/PhysRevA.98.063815" target="_blank" rel="noopener noreferrer">
+    10.1103/PhysRevA.98.063815
+  </a>
+</li>
+
