@@ -158,46 +158,34 @@ def result(t_final,dP_dt,Numberbasis,N,P_values):
     P_values0=P_values.copy()
     Pt=expm_multiply(dP_dt, P_values0, 0, t_final, t_steps).transpose()
 
-    #Defining the observables
-    #Extracting <J11>
-    index_list_1=[]
+    #Defining observables
+    #Getting index list
+
+    index_list=[]
+    n22=[]
+    n11=[]
+    n00=[]
     for idx,n in enumerate(Numberbasis.basis):
         nij=np.array(n).reshape(3,3)
    
 
-        if nij[0,0]+nij[1,1]==N:
-            index_list_1.append(idx)
-
-
-    J11=0*Pt[0]
-
-    for i in range(1,len(index_list_1)):
-        J11+=i*Pt[index_list_1[i]]    #Population of the |1><1|
-
-
-    #Extracting <J22>
-    index_list_2=[]
-    for idx,n in enumerate(Numberbasis.basis):
-        nij=np.array(n).reshape(3,3)
-   
-
-        if nij[0,0]+nij[2,2]==N:
-            index_list_2.append(idx)
-
+    if nij[2,2]+nij[1,1]+nij[0,0]==N :
+        index_list.append(idx)
+        n22.append(nij[2,2])
+        n11.append(nij[1,1])
+        n00.append(nij[0,0])
 
     J22=0*Pt[0]
+    J00=0*Pt[0]
+    for i in range(len(index_list)):
+        J22+=n22[i]*Pt[index_list[i]]    #Population of the |2><2|
+        J00+=n00[i]*Pt[index_list[i]]    #Population of the |0><0|
 
-    for i in range(1,len(index_list_2)):
-        J22+=i*Pt[index_list_2[i]]    #Population of the |2><2|
-
-    J00=np.zeros(len(J22))
-
+    J11=np.zeros(len(J22))
     for i in range(len(J00)):
-        J00[i]=N-J11[i]-J22[i]
+        J11[i]=N-J00[i]-J22[i]
 
-    results=[J00,J11,J22]
-
-    return results
+    return [J00,J11,J22]
 
 
 def output(results,N,final_time):
