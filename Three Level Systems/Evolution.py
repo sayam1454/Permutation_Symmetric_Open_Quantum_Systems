@@ -152,7 +152,7 @@ def Evolution(Numberbasis,gamma20, k02, gamma_phi02, gamma_col20, k_col02, gamma
     return dP_dt
 
 
-def result(t_final,dP_dt,Numberbasis,N,P_values):
+def final_result(t_final,dP_dt,Numberbasis,N,P_values):
     t_steps=100
 
     P_values0=P_values.copy()

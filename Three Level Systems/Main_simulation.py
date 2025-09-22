@@ -10,7 +10,7 @@ the problem and that will return the population of all three energy levels.
 
 
 # Number of qutrits
-N=10
+N=2
 
 # Lindblad parameters
 gamma20=0             #Decay rate between 2->0
@@ -43,6 +43,6 @@ t_final=8
 Numberbasis=SymmetricLiouvilleQutritNumberBasis(N)
 P_values=Initiate_rho(Numberbasis)
 Liouvillian=Evolution(Numberbasis,gamma20, k02, gamma_phi02, gamma_col20, k_col02, gamma_phi_col02,gamma21, k12, gamma_phi12, gamma_col21, k_col12, gamma_phi_col12,gamma10, k01, gamma_phi01, gamma_col10, k_col01, gamma_phi_col01)
-results=result(t_final,Liouvillian,Numberbasis,N,P_values)
+results=final_result(t_final,Liouvillian,Numberbasis,N,P_values)
 
 output(results,N,t_final)

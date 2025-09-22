@@ -35,16 +35,6 @@ gamma_phi_col01=0     #Collective Dephasing rate between 0 and 1 states
 t_final=8
 t_eval = np.linspace(0, t_final, 100)
 
-# Calculating required parameters
-
-Numberbasis=SymmetricLiouvilleQutritNumberBasis(N)
-P_values=Initiate_rho(Numberbasis)
-Liouvillian=Evolution(Numberbasis,gamma20, k02, gamma_phi02, gamma_col20, k_col02, gamma_phi_col02,gamma21, k12, gamma_phi12, gamma_col21, k_col12, gamma_phi_col12,gamma10, k01, gamma_phi01, gamma_col10, k_col01, gamma_phi_col01)
-results=result(t_final,Liouvillian,Numberbasis,N,P_values)
-
-
-
-
 # define basis states
 
 f = basis(3,0)  #excited state
@@ -120,8 +110,16 @@ e_ops = [proj_g, proj_e, proj_f]
 final_val = mesolve(H, rho0, t_eval, c_ops, e_ops)
 
 
-#Plotting
+# Calculating required parameters
+Numberbasis=SymmetricLiouvilleQutritNumberBasis(N)
+P_values=Initiate_rho(Numberbasis)
+Liouvillian=Evolution(Numberbasis,gamma20, k02, gamma_phi02, gamma_col20, k_col02, gamma_phi_col02,gamma21, k12, gamma_phi12, gamma_col21, k_col12, gamma_phi_col12,gamma10, k01, gamma_phi01, gamma_col10, k_col01, gamma_phi_col01)
+results=final_result(t_final,Liouvillian,Numberbasis,N,P_values)
 
+
+
+
+#Plotting
 lab=['Ground state population','1st excited state population','2nd excited state population']
 
 plt.figure(figsize=(10,6))
