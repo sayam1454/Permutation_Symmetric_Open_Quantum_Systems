@@ -112,7 +112,7 @@ def output(results,N,final_time):
 
     plt.xlabel("Time")
     plt.ylabel("Population")
-    plt.title(r"Evolution of population of various states for N="+str(N)+" qutrits")
+    plt.title(r"Evolution of population of various states for N="+str(N)+" qubits")
     plt.grid(True)
     plt.legend()
     plt.show()
